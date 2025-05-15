@@ -1,0 +1,2 @@
+New-GPO -Name "Default Domain Policy - Enhanced" | New-GPLink -Target "DC=corp,DC=homelab"
+Set-GPRegistryValue -Name "Default Domain Policy - Enhanced" -Key "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System" -ValueName "MinimumPasswordLength" -Type DWord -Value 12
